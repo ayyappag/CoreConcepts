@@ -9,6 +9,6 @@ public class Parent {
 	
 
 	public static void m2(){
-		System.out.println("Parent Static");
+		System.out.println("Parent-Class Static Method ");
 	}
 }

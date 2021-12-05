@@ -5,13 +5,13 @@ public class Child extends Parent {
 	public void m1() {
 		// TODO Auto-generated method stub
 		
-//		super.m1();
-		System.out.println("Child");
+		// super.m1(); -- parent will call 
+		System.out.println("Sub-Class");
 	}
 	
 	
 	public static void m2(){
-		System.out.println("Child Static");
+		System.out.println("Sub-Class Static Method ");
 	}
 	
 	public void m3(){

@@ -12,7 +12,6 @@ public class TestConcurrnet {
 		Employee e1 = new Employee("a", "a1", "a2");
 		Employee e2 = new Employee("b", "b1", "b2");
 		Employee e3 = new Employee("c", "c1", "c2");
-		
 
 		List<Employee> list = new CopyOnWriteArrayList<>();
 

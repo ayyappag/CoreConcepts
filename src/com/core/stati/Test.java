@@ -8,7 +8,9 @@ public class Test {
 
 		Child c = new Child();
 		c.m1();
-		Child.m2();
+		Child.m2(); // Sub-Class Static Method
+
+		c.m2(); // Sub-Class Static Method
 		c.m3();
 	}
 }
