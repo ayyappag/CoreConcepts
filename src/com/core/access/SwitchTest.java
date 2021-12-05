@@ -8,11 +8,13 @@ public class SwitchTest {
 	public static void main(String... ki) {
 		String a = "2";
 		int x = 1;
+		System.out.println(" default main method syntax");
 
 		for (int k = 5; x < k; k--) {
 			System.out.println(k);
 
 		}
+		
 		switch (Integer.parseInt(a)) {
 		case 1:
 			System.out.println("1");

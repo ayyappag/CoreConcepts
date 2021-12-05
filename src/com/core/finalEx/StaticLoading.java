@@ -3,9 +3,12 @@ package com.core.finalEx;
 public class StaticLoading {
 
 	private static int i = 10;
+	{
+		System.out.println(" dummy block ");
+	}
 
 	static {
-		System.out.println("Static block");
+		System.out.println("Static block will load First");
 	}
 
 	public StaticLoading() {
@@ -16,11 +19,10 @@ public class StaticLoading {
 	public StaticLoading(int i) {
 		System.out.println("Overlaoded constructor" + i);
 	}
-	
-	
+
 	public static void main(String[] args) {
 		System.out.println("main method");
-	StaticLoading name = new StaticLoading(10);
+		StaticLoading name = new StaticLoading(10);
 	}
-	
+
 }

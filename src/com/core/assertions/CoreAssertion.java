@@ -18,7 +18,7 @@ public class CoreAssertion {
 		if(name == null){
 			System.out.println("dfsdf");
 		}
-		// Assert.notNull(name, " Name's must not be null");
+		 //Assert.notNull(name, " Name's must not be null");
 
 		List<String> al = null ; // new ArrayList<>();
 	//	al.add("d");

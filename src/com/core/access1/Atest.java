@@ -10,6 +10,7 @@ public class Atest {
 		ProtectA protectA = new ProtectA();
 		protectA.m1();
 		protectA.m2();// Visible : Same Package 
+		protectA.m1(10);// Visible : Same Package 
 
 	}
 }

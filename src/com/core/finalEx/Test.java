@@ -1,6 +1,6 @@
 package com.core.finalEx;
 
-public class Test {
+public  class Test {
 	public static void m1() {
 
 	}

@@ -17,7 +17,7 @@ public class A {
 		System.out.println(b.getName());
 		ProtectA protectA = new ProtectA();
 		protectA.m1();
-		// protectA.m2(); Not Visible
+		// protectA.m2(); // Not Visible
 	}
 
 }
