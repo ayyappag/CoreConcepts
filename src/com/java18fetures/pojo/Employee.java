@@ -3,6 +3,16 @@ package com.java18fetures.pojo;
 public class Employee {
 
 	private String name;
+	private String gender;
+	public String getGender() {
+		return gender;
+	}
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	private int sal;
 	
 	private int age;
@@ -22,6 +32,12 @@ public class Employee {
 		this.age = age;
 	}
 
+	public Employee(String name, String gender, int age) {
+		super();
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+	}
 	public int getAge() {
 		return age;
 	}

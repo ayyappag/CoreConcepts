@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 import com.java18fetures.pojo.Employee;;
 
-
 public class FiltersEmp {
 
 	public static void main(String[] args) {
@@ -18,10 +17,13 @@ public class FiltersEmp {
 		System.out.println("Original List" + al);
 		List<Employee> sortOrder = al.stream().filter(e -> e.getSal() > 1238).collect(Collectors.toList());
 		System.out.println("sortOrder List" + sortOrder);
-		
-		List<Employee> removeNull = al.stream().filter(e->e.getName()!=null).collect(Collectors.toList());
-		System.out.println(removeNull);
-		
+
+		List<Employee> removeNull = al.stream().filter(e -> e.getName() != null).collect(Collectors.toList());
+		System.out.println("removeNull" + removeNull);
+
+		List<Employee> nullVals = al.stream().filter(e -> e.getName() == null).collect(Collectors.toList());
+		System.out.println("nullVals" + nullVals);
+
 	}
 
 }

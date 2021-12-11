@@ -2,6 +2,7 @@ package com.core.finalEx;
 
 public class Widening extends Test{
 
+	
 	public static void main(String[] args) {
 		
 		System.out.println("************* we can extend class having main method also");
@@ -12,6 +13,8 @@ public class Widening extends Test{
 		
 		Test t = new Test();
 		t.main(null);
+		
+		Test.main(null);
 	}
 
 	static void m1(Integer i) {

@@ -1,8 +1,10 @@
 package com.java18fetures.foreach;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class ForEachTest {
 
@@ -34,7 +36,11 @@ public class ForEachTest {
 		list.stream().forEach(i -> {
 			System.out.println(" == " + i * i);
 		});
-
+		
+//		List<Integer> list2 = list.stream().collect(Collectors.toList());
+//		List<Integer> list2 = list.stream().collect(i --> i * i);
+		
+		
 	}
 
 }

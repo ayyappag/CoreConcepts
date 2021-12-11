@@ -5,6 +5,7 @@ package com.java18fetures.funtionalinterfaces;
 public interface TestInterface {
 	
 	public void m1(); // it should have only one Single unimplemented method.
+//	public  abstract void m13(); // it should have only one Single unimplemented method.
 	
 	public static void m2() {
 		System.out.println(" hello test m2");
