@@ -40,7 +40,8 @@ public class Java8OracleExm {
 
 	public static void getUppercase(List<Employee> list) {
 		System.out.println("List : " + list);
-		List<String> upperCaseNames = list.stream().filter(e -> e.getAge() > 18).map(emp -> emp.getName())
+		List<String> upperCaseNames = list.stream().filter(e -> e.getAge() > 18)
+				.map(emp -> emp.getName())
 				.map(name -> name.toUpperCase()).collect(Collectors.toList());
 		System.out.println(" Print Upper Case Name : " + upperCaseNames);
 	}
@@ -49,7 +50,8 @@ public class Java8OracleExm {
 
 	public static void getUppercaseFemaleNames(List<Employee> list) {
 		System.out.println("Print Female Names in Uppercase");
-		List<String> names = list.stream().filter(e -> (e.getAge() > 18 && e.getGender().equals("Female")))
+		List<String> names = list.stream().
+				filter(e -> (e.getAge() > 18 && e.getGender().equals("Female")))
 				.map(emp -> emp.getName()).map(name -> name.toUpperCase()).collect(Collectors.toList());
 		System.out.println(" Print Upper Case Name : " + names);
 

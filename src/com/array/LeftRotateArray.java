@@ -15,8 +15,14 @@ public class LeftRotateArray {
 		// greater than array length
 		d = d % n;
 		reverseArray(arr, 0, d - 1);
+		 printArray(arr);
+		System.out.println("*");
 		reverseArray(arr, d, n - 1);
+		 printArray(arr);
+		System.out.println("**");
 		reverseArray(arr, 0, n - 1);
+		 printArray(arr);
+		System.out.println("***");
 	}
 
 	/* Function to reverse arr[] from index start to end */
@@ -28,6 +34,25 @@ public class LeftRotateArray {
 			arr[end] = temp;
 			start++;
 			end--;
+		}
+	}
+
+	// test
+	static void rotating(int arr[], int rotation) {
+
+		/*
+		 * for (int i = 0, j = arr.length - 1, d = 0; (i < j && d <= rotation); i++,
+		 * j--, d++) { int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp;
+		 * 
+		 * }
+		 */
+
+		int i = 0, j = arr.length - 1, d = 0;
+		while ((i != j) && (d < 2)) {
+			int temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+			i++;d++;
 		}
 	}
 
@@ -44,7 +69,9 @@ public class LeftRotateArray {
 		int n = arr.length;
 		int d = 2;
 
-		leftRotate(arr, d); // Rotate array by d
+		 leftRotate(arr, d); // Rotate array by d -- 3 4 5 6 7 1 2
+
+	//	rotating(arr, d); // -- 7 6 5 4 3 2 1
 		printArray(arr);
 	}
 

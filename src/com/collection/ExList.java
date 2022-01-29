@@ -16,7 +16,8 @@ public class ExList {
 	}
 
 	public static void rest() {
-		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>(new Integer[] { 1, 2, 3 });
+		CopyOnWriteArrayList<Integer> list =
+				new CopyOnWriteArrayList<>(new Integer[] { 1, 2, 3 });
 
 		System.out.println(list); // [1, 2, 3]
 
@@ -67,7 +68,8 @@ public class ExList {
 		copyOnwritelist.add(e2);
 		copyOnwritelist.add(e3);
 
-		List<Employee> unmodifiableList = Collections.unmodifiableList(list);
+		List<Employee> unmodifiableList = 
+				Collections.unmodifiableList(list);
 		System.out.println("List:" + list);
 		// list2.add(new Employee("d", "d", "sdsds")); // Exception in thread "main"
 		// java.lang.UnsupportedOperationException

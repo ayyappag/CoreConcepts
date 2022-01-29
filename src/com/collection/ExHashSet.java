@@ -25,9 +25,11 @@ public class ExHashSet {
 	public static void hashSetIteration(List<String> l) {
 		Set<String> s = new HashSet<>(l);
 
-		for (Iterator<String> iterator = s.iterator(); iterator.hasNext();) {
+		for (Iterator<String> iterator = s.iterator();
+				iterator.hasNext();) {
 			String string = (String) iterator.next();
-			System.out.println(string + ":=>" + Collections.frequency(l, string));
+			System.out.println(string + ":=>" + 
+			Collections.frequency(l, string));
 		}
 
 		Collections.reverse(l);

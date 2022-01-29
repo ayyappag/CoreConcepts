@@ -9,7 +9,8 @@ public class StreamMapExample {
 		// TODO Auto-generated method stub
 
 		getUsers().stream().filter(user -> user.getSal() > 1300 && user.getSal() <= 1500)
-				.map((User user) -> new UserDto(user.getName(), user.getLocation(), user.getSal()))
+				.map((User user) -> new UserDto(user.getName()
+						, user.getLocation(), user.getSal()))
 				.forEach(System.out::println);
 
 	}

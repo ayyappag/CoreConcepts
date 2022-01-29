@@ -52,7 +52,8 @@ public class CollectorsEx2 {
 
 	private void byGroupName(List<Employee> list) {
 		System.out.println("byGroup 11");
-		Map<Integer, List<Employee>> personsByAge = list.stream().collect(Collectors.groupingBy(emp -> emp.getAge()));
+		Map<Integer, List<Employee>> personsByAge =
+				list.stream().collect(Collectors.groupingBy(emp -> emp.getAge()));
 
 		personsByAge.forEach((age, emp) -> System.out.format("Age %s %s -> ", age, emp));
 		System.out.println();
@@ -72,7 +73,8 @@ public class CollectorsEx2 {
 
 	private void summarizingInt(List<Employee> list) {
 		System.out.println("summarizingInt");
-		IntSummaryStatistics ageSummary = list.stream().collect(Collectors.summarizingInt(p -> p.getAge()));
+		IntSummaryStatistics ageSummary = list.stream().
+				collect(Collectors.summarizingInt(p -> p.getAge()));
 		System.out.println("ageSummary = " + ageSummary); // IntSummaryStatistics{count=5, sum=161, min=24,
 															// average=32.200000, max=38}
 		System.out.println("Get average : " + ageSummary.getAverage());
@@ -83,9 +85,11 @@ public class CollectorsEx2 {
 	private void duplciate() {
 		List<Integer> list = Arrays.asList(1, 4, 4, 5);
 		List<String> list2 = Arrays.asList("a", "b", "b");
-		list.stream().filter(i -> Collections.frequency(list, i) > 1).collect(Collectors.toSet())
+		list.stream().filter(i -> Collections.frequency(list, i) > 1).
+		collect(Collectors.toSet())
 				.forEach(System.out::println);
-		int count = list2.stream().filter(i -> Collections.frequency(list2, i) > 1).collect(Collectors.toSet()).size();
+		int count = list2.stream().filter(i -> Collections.frequency(list2, i) > 1).
+				collect(Collectors.toSet()).size();
 		System.out.println("count => " + count);
 		if (count != 0)
 			System.out.println("hello wrolld");
@@ -117,12 +121,15 @@ public class CollectorsEx2 {
 
 	public static void sortedByEmpSalLambda(List<Employee> list) {
 		System.out.println(" sorted by sal with lambda expression");
-		list.stream().sorted((e1, e2) -> e1.getSal() - e2.getSal()).forEach(System.out::println);
+		list.stream().sorted((e1, e2) -> e1.getSal() - e2.getSal()).
+		forEach(System.out::println);
 
 		System.out.println(" by using Comparator methods ");
-		list.stream().sorted(Comparator.comparingLong(Employee::getSal)).forEach(System.out::println);
+		list.stream().sorted(Comparator.comparingLong(Employee::getSal)).
+		forEach(System.out::println);
 		System.out.println(" by using Comparator methods with reverse order ");
-		list.stream().sorted(Comparator.comparingLong(Employee::getSal).reversed()).forEach(System.out::println);
+		list.stream().sorted(Comparator.comparingLong(Employee::getSal).reversed()).
+		forEach(System.out::println);
 		
 		List<String> duplicate = Arrays.asList("a","b","a","b");
 		

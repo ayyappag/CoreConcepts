@@ -27,7 +27,8 @@ public class Test {
 	}
 
 	private void collectedbyName(List<Employee> list) {
-		List<Employee> filtered = list.stream().filter(emp -> emp.getName().startsWith("x"))
+		List<Employee> filtered = list.stream().
+				filter(emp -> emp.getName().startsWith("x"))
 				.collect(Collectors.toList());
 		filtered.forEach(System.out::println);
 
