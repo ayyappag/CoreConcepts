@@ -23,11 +23,8 @@ public class TwoArray {
 				temp[i] = b[j];
 				j--;
 			}
-			
-				
 		}
-		return temp;
-		
+		return temp;		
 	}
 
 }

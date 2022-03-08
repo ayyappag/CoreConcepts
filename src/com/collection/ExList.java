@@ -24,8 +24,10 @@ public class ExList {
 		// Get iterator 1
 		Iterator<Integer> itr1 = list.iterator();
 
-		System.out.println("list hascode  before -- " + list.hashCode());
-		System.out.println("itr1 hascode -- " + itr1.hashCode());
+		System.out.println("list hascode  before -- "
+		+ list.hashCode());
+		System.out.println("itr1 hascode -- "
+		+ itr1.hashCode());
 
 		// Add one element and verify list is updated
 		list.add(4);
@@ -56,7 +58,7 @@ public class ExList {
 		Employee e3 = new Employee("c", "c1", "c2");
 
 		// List<Employee> list = new CopyOnWriteArrayList<>();
-		List<Employee> list = new ArrayList();
+		List<Employee> list = new ArrayList<Employee>();
 
 		List<Employee> copyOnwritelist = new CopyOnWriteArrayList<>();
 
@@ -73,14 +75,17 @@ public class ExList {
 		System.out.println("List:" + list);
 		// list2.add(new Employee("d", "d", "sdsds")); // Exception in thread "main"
 		// java.lang.UnsupportedOperationException
-		System.out.println("list sizes : list => " + list.size() + ": list2 --> " + unmodifiableList.size());
+		System.out.println("list sizes : list => " + 
+		list.size() + ": unmodifiableList size --> " + unmodifiableList.size());
 
 		list.add(new Employee("d", "d", "sdsds"));
 
-		System.out.println("list sizes : list => " + list.size() + ": list2 --> " + unmodifiableList.size());
+		System.out.println("list sizes : list => " + list.size()
+					+ ": unmodifiableList size --> " + unmodifiableList.size());
 
 		System.out.println("unmodifiableList :" + unmodifiableList);
-		System.out.println("copyOnwritelist *******************  :" + copyOnwritelist.size());
+		System.out.println("copyOnwritelist *******************  :" 
+		+ copyOnwritelist.size());
 
 		for (Iterator iterator = copyOnwritelist.iterator(); iterator.hasNext();) { 
 			Employee employee = (Employee) iterator.next();
